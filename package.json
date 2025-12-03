@@ -1,0 +1,27 @@
+{
+  "name": "selenium_automationclass_2025",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bingTest": "npx playwright test tests/Day01_1125/T1_BingSearch.spec.ts --headed --workers=1 --project=chromium --reporter=html",
+    "USPS": "npx playwright test tests/Day02_1125/T1_MouseHover_USPS.spec.ts --headed --workers=1 --project=chromium --reporter=html",
+    "smokeSuit": "npx playwright test --grep @smoke src/test/* headed --workers=1 --project=chromium --reporter=html" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shafiat123/Automation_Projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Shafiat123/Automation_Projects/issues"
+  },
+  "homepage": "https://github.com/Shafiat123/Automation_Projects#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1"
+  }
+}
