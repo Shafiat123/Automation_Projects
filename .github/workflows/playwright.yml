@@ -17,8 +17,9 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run BingResuable Tests
-      run: npm run BingResuable
+    - name: run all tests
+      run: npm run AllTest
+    - name: Upload Playwright Report
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
