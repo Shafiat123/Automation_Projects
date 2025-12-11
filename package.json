@@ -11,7 +11,7 @@
     "bingTestCB": "npx playwright test tests/Day01_1125/T1_BingSearch.spec.ts --headed --workers=1 --project=chrome --project=webkit --project=firefox --reporter=html",
     "uspsParallel": "npx playwright test tests/Day03_1202/T1_USPS_MultipleTest.spec.ts --headed --workers=2 --project=chrome --reporter=html",
     "uspsParallelCB": "npx playwright test tests/Day03_1202/T1_USPS_MultipleTest.spec.ts --headed --workers=2 --project=chrome --project=webkit --project=firefox --reporter=html",
-    "BingResuable": "npx playwright test tests/Day04_1208/Bing_Search_Reusable.spec.ts --headed --workers=1 --project=chrome --reporter=html"
+    "BingResuable": "npx playwright test tests/Day04_1208/Bing_Search_Reusable.spec.ts --workers=1 --project=chrome --reporter=html"
 
 
 
