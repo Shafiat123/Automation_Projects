@@ -20,7 +20,6 @@ await page.waitForTimeout(5000) //wait for few seconds for the next step
         await page.locator('button:has-text("Track")').click();
         //click on track button using contains id
         await page.locator('[id*="track-button"]').click();
-
     */
 
 }) //end of test
