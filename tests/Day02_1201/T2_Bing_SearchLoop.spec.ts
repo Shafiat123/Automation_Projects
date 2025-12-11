@@ -11,6 +11,7 @@ test("Search for a keyword on bing website @smoke", async ({ page }) => {
     cars.push('Toyota')
     cars.push('Honda')
 
+    //loop through the array list
     for (let i = 0; i < cars.length; i++) {
 
     //navigate to bing
