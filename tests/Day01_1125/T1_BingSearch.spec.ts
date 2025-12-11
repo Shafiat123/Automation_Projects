@@ -30,4 +30,5 @@ test("Capture Search", async() =>{
     //extract number from the search result
     let resultsArray = searchResult?.split(' ')
     console.log("Result Array "+ resultsArray[1])  
+    
 }) //end of test 2
