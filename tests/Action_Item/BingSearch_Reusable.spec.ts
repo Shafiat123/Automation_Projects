@@ -21,7 +21,7 @@ test("Search scoccer in Bing search box @ai", async ({  }) => {
 
 test("Capture Search Result for soccer @ai", async ({  }) => {
 
-    await page.waitForSelector('[class = "sb_count"]', { state: 'visible' }); 
+    await page.waitForSelector('[class = "sb_count"]'); 
 
     let searchResult = await getText(page, '[class = "sb_count"]', "searchResult")
     console.log("Search result: " + searchResult)
