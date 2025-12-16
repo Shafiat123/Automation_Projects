@@ -14,16 +14,18 @@ test("Search scoccer in Bing search box @ai", async ({  }) => {
     await page.waitForTimeout(3000) //wait for few seconds for the next step
     //type a keyword on the search box
     await typeText(page, '[name="q"]', 'Soccer', "SearchBox")
+    
     await page.keyboard.press('Enter')
 
     
 })//end of test 1
 
 test("Capture Search Result for soccer @ai", async ({  }) => {
+    const resultLocator = '.sb_count';
 
-    await page.waitForSelector('[class = "sb_count"]'); 
+    await page.waitForSelector(resultLocator, { state: 'attached' }); 
 
-    let searchResult = await getText(page, '[class = "sb_count"]', "searchResult")
+    let searchResult = await getText(page, resultLocator, "searchResult")
     console.log("Search result: " + searchResult)
     let searchNumber = searchResult.split(" ")
     console.log("Search number is: " + searchNumber[1])
