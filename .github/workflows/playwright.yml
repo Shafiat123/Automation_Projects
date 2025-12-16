@@ -24,8 +24,8 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    - name: Run all tests
-      run: npm run allTests
+    - name: Run Action Items Tests
+      run: npm run BingSearch@Ai
 
     - name: Upload Playwright Report
       if: ${{ !cancelled() }}

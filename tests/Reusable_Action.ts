@@ -1,5 +1,13 @@
 import { Page } from '@playwright/test';
 
+
+//method for hover element
+export async function hoverElement(page: Page, Locator: string, index: number, elementName: string) {
+    console.log("Hovering on element: " + elementName)
+    await page.locator(Locator).hover()
+}//end of hoverElement method
+
+
 //method to click any unique element
 export async function clickElement(page: Page, Locator: string, elementName: string) {
     console.log("Clicking on element: " + elementName)
@@ -32,4 +40,11 @@ export async function getText(page: Page, Locator: string, elementName: string) 
     return textValue
 }//end of getText method
 
+//method to scroll by pixel
+export async function scrollByPixel(page: Page, pixelValue: number) {
+    console.log("Scrolling by pixel: " + pixelValue)
+    await page.evaluate((pixelValue) => {
+        window.scrollBy(0, pixelValue);
+    }, pixelValue);
+}
 
